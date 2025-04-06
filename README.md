@@ -1,160 +1,237 @@
-### Software Testing
+# 🧪 Software Testing Notes
+
+## 🔍 What is Software Testing?
 Software testing is the process of evaluating and verifying that a software application or system meets the specified requirements and works as intended.
 
-### Why is testing necessary?
-Testing is necessary to identify defects, ensure software quality, reduce risks, and deliver a reliable product to the customer.
+## ❓ Why is Testing Necessary?
+Testing helps:
+- Identify defects
+- Ensure software quality
+- Reduce risks
+- Deliver a reliable product to the customer
 
-### QA and QC
-**QA (Quality Assurance):** 
-Focuses on preventing defects through process improvements. 
+## 🧬 QA vs QC
 
-**QC (Quality Control):**
-Focuses on identifying defects in the actual product through testing. 
+### ✅ Quality Assurance (QA)
+- Focuses on **processes** to prevent defects.
+- Involves **standards, methodologies, and improvements**.
 
-### Types of Testing
-
-**1. Unit Testing**  
-- Testing individual components or functions of a program.  
-- Done by developers to ensure each unit of code works as expected.  
-- Helps catch bugs early during development.
-
----
-
-**2. Integration Testing**  
-- Focuses on the interaction between integrated modules.  
-- Ensures data flows correctly between units/modules.  
-- Performed after unit testing and before system testing.
+### ✅ Quality Control (QC)
+- Focuses on **identifying defects** in the product.
+- Involves **actual testing** of the software.
 
 ---
 
-**3. System Testing**  
-- End-to-end testing of the complete software system.  
-- Validates the software against the functional and non-functional requirements.  
-- Performed in an environment similar to production.
+## 🧪 Types of Testing
+
+### 1. Unit Testing
+- Tests **individual components or functions**.
+- Done by **developers**.
+- Helps catch bugs **early** in development.
+
+### 2. Integration Testing
+- Tests the **interaction between modules**.
+- Ensures **data flows** correctly.
+- Performed **after unit testing**.
+
+### 3. System Testing
+- **End-to-end testing** of the entire application.
+- Validates against **functional and non-functional** requirements.
+
+### 4. Acceptance Testing
+- Ensures the system meets **business needs**.
+- Performed by **clients or end-users**.
+- Includes **Alpha** and **Beta** testing.
+
+### 5. Smoke Testing
+- Basic check to confirm **build stability**.
+- Also known as **Build Verification Testing**.
+
+### 6. Sanity Testing
+- Focused testing of a specific **feature or bug fix**.
+- Performed on **minor builds**.
+
+### 7. Regression Testing
+- Re-run test cases to ensure no **new bugs**.
+- Ensures **existing functionality** isn't broken.
+- Often **automated**.
+
+### 8. Retesting
+- Done after fixing a **specific defect**.
+- Confirms the issue is **resolved**.
+
+### 9. Exploratory Testing
+- Informal testing based on **experience and intuition**.
+- Great when documentation is **limited**.
+
+### 10. Usability Testing
+- Measures **ease of use** and user experience.
+- Conducted with **real users**.
 
 ---
 
-**4. Acceptance Testing**  
-- Done to determine if the system meets business needs.  
-- Usually performed by clients or end-users.  
-- Types include Alpha Testing (internal) and Beta Testing (external users).
-
----
-
-**5. Smoke Testing**  
-- Basic test to check whether the build is stable.  
-- Also called "Build Verification Testing."  
-- Quickly verifies core functionalities before deeper testing.
-
----
-
-**6. Sanity Testing**  
-- Narrow and focused testing on a specific feature or bug fix.  
-- Performed after receiving a new build with minor changes.  
-- Helps decide whether it’s worth continuing with further testing.
-
----
-
-**7. Regression Testing**  
-- Re-execution of existing test cases to verify that new code changes haven't broken existing functionality.  
-- Ensures software stability after enhancements or bug fixes.  
-- Often automated to save time.
-
----
-
-**8. Retesting**  
-- Testing a specific failed test case after a defect is fixed.  
-- Confirms whether the original issue has been resolved.  
-- Different from regression testing as it focuses only on the failed test cases.
-
----
-
-**9. Exploratory Testing**  
-- Informal testing where testers explore the application without predefined test cases.  
-- Based on tester’s intuition, experience, and creativity.  
-- Useful in early stages or when there is little documentation.
-
----
-
-**10. Usability Testing**  
-- Evaluates how easy and user-friendly the application is.  
-- Involves real users performing real tasks.  
-- Focuses on layout, navigation, and overall user experience.
-
----
-
-## Test Case and Test Scenario
+## 📝 Test Case vs Test Scenario
 
 ### Test Scenario
-- High-level idea of what to test, often derived from requirements.
-- Describes **what to test**, not how.
-- One test scenario can have **multiple test cases**.
-- Helps ensure coverage of **end-to-end functionalities**.
-
-**Example:**  
-**Test Scenario**: Verify user login functionality.
-
----
+- High-level idea of **what to test**.
+- One scenario can include **multiple test cases**.
+- Ensures **end-to-end** coverage.
 
 ### Test Case
-- Detailed steps to verify a functionality.
-- Describes **how to test** the scenario.
-- Includes test data, preconditions, and expected output.
-- More **formal and structured**.
+- Specific **steps, inputs, and expected outcomes**.
+- Structured and detailed.
 
-**Example** (for the above scenario):  
-**Test Case**:  
-- **Step 1**: Open login page  
-- **Step 2**: Enter valid username and password  
-- **Step 3**: Click login  
-- **Expected Result**: User is redirected to the dashboard
+#### 💡 Example
+**Scenario**: Verify login functionality  
+**Test Case**:
+- Step 1: Open login page  
+- Step 2: Enter valid credentials  
+- Step 3: Click login  
+- Expected: User is redirected to dashboard
 
----
+### 🔄 Summary Table
 
-### Summary Table
-
-| Feature           | Test Scenario                            | Test Case                                 |
-|------------------|-------------------------------------------|--------------------------------------------|
-| **Level**         | High-level                                | Detailed                                   |
-| **Focus**         | What to test                              | How to test                                |
-| **Documentation** | One-liner or brief description            | Contains steps, data, expected result      |
-| **Usage**         | To ensure broad coverage                  | To validate specific functionality         |
+| Feature           | Test Scenario                  | Test Case                              |
+|------------------|--------------------------------|-----------------------------------------|
+| **Level**         | High-level                     | Detailed                                |
+| **Focus**         | What to test                   | How to test                             |
+| **Docs**          | One-liner                      | Steps, data, results                    |
+| **Purpose**       | Ensure broad coverage          | Validate specific functionality         |
 
 ---
 
-## Test Case 
+## ✅ Test Case Format
 
-A **test case** is a set of actions executed to verify a specific feature or functionality of the application.
+A **test case** verifies a specific functionality.
 
-It helps ensure that the software behaves as expected under defined conditions.
+### Template:
+- **Test Case ID**
+- **Test Description**
+- **Preconditions**
+- **Test Steps**
+- **Expected Result**
+- **Actual Result**
+- **Status (Pass/Fail)**
 
----
-
-### A Test Case Typically Includes:
-
-- **Test Case ID** – Unique identifier for the test case  
-- **Test Description** – Brief explanation of what is being tested  
-- **Preconditions** – Conditions that must be met before execution  
-- **Test Steps** – Step-by-step instructions to perform the test  
-- **Expected Result** – The expected outcome if the application works correctly  
-- **Actual Result** – The actual outcome after execution  
-- **Status (Pass/Fail)** – Final result of the test execution
-
----
-
-### Example Test Case Format
+### Example Table
 
 | Field             | Description                                 |
 |------------------|---------------------------------------------|
-| **Test Case ID**  | TC_Login_01                                 |
-| **Description**   | Verify login with valid credentials         |
-| **Preconditions** | User must be on the login page              |
-| **Test Steps**    | 1. Enter username<br />2. Enter password<br />3. Click login |
-| **Expected Result** | User is redirected to dashboard          |
-| **Actual Result** | User is redirected to dashboard             |
-| **Status**        | Pass                                        |
+| Test Case ID     | TC_Login_01                                 |
+| Description      | Login with valid credentials                |
+| Preconditions    | User on login page                          |
+| Test Steps       | 1. Enter username<br />2. Enter password<br />3. Click login |
+| Expected Result  | Redirected to dashboard                     |
+| Actual Result    | Redirected to dashboard                     |
+| Status           | Pass                                        |
 
 ---
 
+## ✅ Verification vs Validation
 
+### 🔍 Verification
+- Checks **if we are building the product right**.
+- Focuses on **documents, design, code**.
+- **Static** testing (e.g., reviews).
 
+### ✅ Validation
+- Checks **if we are building the right product**.
+- Focuses on **actual product**.
+- **Dynamic** testing (e.g., test execution).
+
+### 📊 Comparison Table
+
+| Feature         | Verification                               | Validation                                 |
+|----------------|---------------------------------------------|---------------------------------------------|
+| Definition      | Building the product right                 | Building the right product                  |
+| Focus           | Process-oriented                           | Product-oriented                            |
+| Type            | Static testing                             | Dynamic testing                             |
+| When            | During development                         | After development                           |
+| Methods         | Reviews, walkthroughs                      | Functional testing, UAT                     |
+
+---
+
+## 🔄 Static vs Dynamic Testing
+
+### 📘 Static Testing
+- Code is **not executed**.
+- Done via **reviews, walkthroughs, and analysis**.
+- Prevents defects **early**.
+
+### ⚙️ Dynamic Testing
+- Involves **executing code**.
+- Focuses on **output vs expected**.
+- Includes **manual, automation, unit, integration** tests.
+
+### 📊 Summary Table
+
+| Feature           | Static Testing                              | Dynamic Testing                             |
+|------------------|----------------------------------------------|----------------------------------------------|
+| Code Execution    | No                                           | Yes                                          |
+| Goal              | Prevent defects                              | Find defects                                  |
+| Type              | Preventive                                  | Corrective                                   |
+| Focus             | Requirements, code, design                  | Functional behavior                          |
+| Who               | Developers, reviewers                       | QA/Testers                                   |
+| Examples          | Code review, static analysis                | Unit test, regression test                   |
+
+---
+
+## 🚀 Software Testing Life Cycle (STLC)
+
+### What is STLC?
+STLC is a **systematic testing process** with phases to ensure software **quality and completeness**.
+
+### 🔁 STLC Phases
+
+1. **Requirement Analysis**
+   - Identify what to test
+   - Review documents, discuss with stakeholders
+
+2. **Test Planning**
+   - Define objectives, strategy, scope
+   - Create **Test Plan**, estimate effort
+
+3. **Test Case Design**
+   - Write test cases/scripts
+   - Prepare test data
+
+4. **Environment Setup**
+   - Configure tools, servers, databases
+   - Ensure test readiness
+
+5. **Test Execution**
+   - Execute test cases
+   - Log and re-test defects
+
+6. **Test Closure**
+   - Finalize testing
+   - Prepare **summary reports**, metrics
+
+---
+
+## 🎯 Functional vs Non-Functional Testing
+
+### ✅ Functional Testing
+- Tests **what the system does**
+- Based on **business requirements**
+
+**Examples**:
+- Login, registration
+- Form validation
+
+### ⚙️ Non-Functional Testing
+- Tests **how the system behaves**
+- Based on **performance, usability, security**
+
+**Examples**:
+- Load, stress testing
+- Security and usability testing
+
+### 📊 Summary Table
+
+| Feature             | Functional Testing                       | Non-Functional Testing                      |
+|--------------------|-------------------------------------------|---------------------------------------------|
+| What it tests      | Features, actions                        | Quality, performance                        |
+| Based on           | Functional requirements                  | Non-functional requirements                 |
+| Tools              | Selenium, Postman                        | JMeter, LoadRunner                          |
+| Examples           | Login, search                            | Load, security, UI response                 |
