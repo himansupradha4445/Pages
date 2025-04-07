@@ -318,3 +318,210 @@ It includes a series of **well-defined phases** to manage testing efficiently fr
 | **Examples**           | Login, search, submit form                 | Load test, security test, UI usability test     |
 
 ---
+
+# Defect & Defect Life Cycle
+
+##  Defect
+
+A **defect** refers to an **error in a software application** that causes it to behave **unexpectedly or incorrectly**.  
+
+---
+
+## Defect Life Cycle
+
+the Defect Life Cycle is the life cycle of a defect that it goes through covering a specific set of states in its entire life. 
+Mainly bug life cycle refers to its entire state starting from a new defect detected to the closing off of that defect by the tester.
+
+
+---
+
+## Typical Defect States:
+
+1. **New** – Defect is logged.
+2. **Assigned** – Assigned to a developer.
+3. **Open** – The developer starts analyzing the issue.
+4. **Fixed** – Developer fixes the issue.
+5. **Retest** – Tester re-tests the fix.
+6. **Verified** – Tester confirms the defect is resolved.
+7. **Closed** – Final stage after successful verification.
+
+### Possible Alternate States:
+- **Rejected** - The Developer decides it's not a defect (e.g., intended behaviour).
+- **Deferred** -  The defect is postponed for future releases.
+- **Duplicate** - A similar defect already exists in the system.
+- **Cannot Reproduce** - The Developer is unable to replicate the issue.
+
+---
+# Defect Life Cycle Flow
+
+The typical flow of a **defect life cycle** involves the following stages:
+
+'''
+New 
+ ↓ 
+Assigned 
+ ↓ 
+Open 
+ ↓ 
+Fixed 
+ ↓ 
+Retest 
+ ↓ 
+Verified 
+ ↓ 
+Closed
+
+'''
+---
+
+
+# Software Testing Life Cycle (STLC)
+
+The procedure of software testing is also known as **STLC (Software Testing Life Cycle)** which includes phases of the testing process. The testing process is executed in a well-planned and systematic manner. All activities are done to improve the quality of the software product.
+
+## STLC Phases Overview
+
+1. Requirement Analysis
+2. Test Plan Creation
+3. Environment Setup
+4. Test Case Execution
+5. Defect Logging
+6. Test Cycle Closure
+
+---
+
+## Requirement Analysis
+
+**Definition:**
+First step of manual testing where testers analyze the requirement document (from SDLC) to examine the client’s needs and prepare for validation.
+
+**Entry Criteria:**
+- Requirement specification
+- Application architecture document
+- Acceptance criteria
+
+**Activities:**
+- Prepare a list of requirements & get clarifications
+- Identify all test types (performance, functional, security)
+- Identify required test environments
+
+**Deliverables:**
+- List of testable requirements
+- Test environment details
+
+---
+
+## Test Plan Creation
+
+**Definition:**
+Crucial phase where test strategies are defined and effort/cost estimations are made.
+
+**Entry Criteria:**
+- Requirement document
+
+**Activities:**
+- Define objectives and scope
+- Plan testing methods and schedules
+- Define roles and responsibilities
+- Identify deliverables and risks
+
+**Deliverables:**
+- Test strategy document
+- Effort estimation
+
+---
+
+## Environment Setup
+
+**Definition:**
+Independent activity that ensures the readiness of the test environment using necessary software/hardware.
+
+**Entry Criteria:**
+- Test strategy & plan
+- Test cases
+- Test data
+
+**Activities:**
+- Prepare list of software/hardware
+- Execute smoke tests to validate environment
+
+**Deliverables:**
+- Environment setup confirmation
+- Smoke test report
+
+---
+
+## Test Case Execution
+
+**Definition:**
+Testing team executes developed test cases, logs results, and tracks mapped requirements through RTM (Requirement Traceability Matrix).
+
+**Entry Criteria:**
+- Requirement Document
+
+**Activities:**
+- Write and execute test cases
+- Map test cases to requirements
+- Prepare RTM
+
+**Deliverables:**
+- Test execution results
+- Defect list and details
+
+---
+
+## Defect Logging
+
+**Definition:**
+Evaluation of software based on test metrics, logs defects, and sends for re-testing post fixes.
+
+**Entry Criteria:**
+- Test case execution report
+- Defect report
+
+**Activities:**
+- Analyze defects by type and severity
+- Log and re-test defects
+
+**Deliverables:**
+- Closure report
+- Test metrics
+
+---
+
+## Test Cycle Closure
+
+**Definition:**
+Final phase that evaluates the overall testing strategy and prepares closure documentation for future reference.
+
+**Entry Criteria:**
+- All test reports and defect documentation
+
+**Activities:**
+- Evaluate test strategy and outcomes
+- Archive documents for future use
+
+**Deliverables:**
+- Test Closure Report
+
+---
+
+## STLC Flow Summary:
+
+```
+Requirement Analysis
+       ↓
+Test Plan Creation
+       ↓
+Environment Setup
+       ↓
+Test Case Execution
+       ↓
+Defect Logging
+       ↓
+Test Cycle Closure
+```
+
+
+
+
