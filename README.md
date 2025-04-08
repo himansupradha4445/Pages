@@ -337,13 +337,15 @@ Mainly bug life cycle refers to its entire state starting from a new defect dete
 
 ## Typical Defect States:
 
-1. **New** – Defect is logged.
-2. **Assigned** – Assigned to a developer.
-3. **Open** – The developer starts analyzing the issue.
-4. **Fixed** – Developer fixes the issue.
-5. **Retest** – Tester re-tests the fix.
-6. **Verified** – Tester confirms the defect is resolved.
-7. **Closed** – Final stage after successful verification.
+1. **New** – When any new defect is identified by the tester, it falls in the ‘New’ state. The tester provides a proper Defect document to the Development team so that the development team can refer to the Defect Document and fix the bug accordingly.
+2. **Assigned** – Defects that are in the status of ‘New’ will be approved and that newly identified defect is assigned to the development team for working on the defect and to resolve that. When the defect is assigned to the developer team the status of the bug changes to the ‘Assigned’ state.
+3. **Open** –  In this ‘Open’ state the defect is being addressed by the developer team and the developer team works on the defect for fixing the bug. Based on some specific reason if the developer team feels that the defect is not appropriate then it is transferred to either the ‘Rejected’ or ‘Deferred’ state.
+4. **Fixed** –After necessary changes of codes or after fixing identified bug developer team marks the state as ‘Fixed’.
+5. **Pending** – During the fixing of the defect is completed, the developer team passes the new code to the testing team for retesting. The code/application is pending for retesting on the Tester side so the status is assigned as ‘Pending Retest’.
+6. **Retesting** – At this stage, the tester starts work of retesting the defect to check whether the defect is fixed by the developer or not, and the status is marked as ‘Retesting’.
+7. **Re-Open** – After ‘Retesting’ if the tester team finds that the bug continues like previously even after the developer team has fixed the bug, then the status of the bug is again changed to ‘Reopened’. Once again bug goes to the ‘Open’ state and goes through the life cycle again. This means it goes for Re-fixing by the developer team.
+8. **Verified** - The tester re-tests the bug after it got fixed by the developer team and if the tester does not find any kind of defect/bug then the bug is fixed and the status assigned is ‘Verified’.
+9.  ***Closed** - It is the final state of the Defect Cycle, after fixing the defect by the developer team when testing found that the bug has been resolved and it does not persist then they mark the defect as a ‘Closed’ state.
 
 ### Possible Alternate States:
 - **Rejected** - The Developer decides it's not a defect (e.g., intended behaviour).
