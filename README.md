@@ -225,55 +225,113 @@ It helps ensure that the software behaves as expected under defined conditions.
 
 ## STLC?
 
-**STLC (Software Testing Life Cycle)** is a **systematic process** followed during software testing to ensure the **quality** and **completeness** of the software application.
-
-It includes a series of **well-defined phases** to manage testing efficiently from start to finish.
-
----
-
-## 🌀 STLC Phases
-
-### 1. Requirement Analysis
-- Understand and analyze testing requirements.
-- Identify testable and non-testable items.
-- Involves collaboration with stakeholders or BAs.
+- STLC (Software Testing Life Cycle) is a sequence of specific activities conducted during testing to ensure software quality goals are met.
+- STLC involves both verification and validation activities.
+- It is not just a single/isolated activity, It consists of a series of activities carried out methodologically to help certify your software product.
 
 ---
 
-### 2. Test Planning
-- Define the scope, strategy, and goals of testing.
-- Prepare the **Test Plan** document.
-- Identify required resources, tools, and timelines.
+# 🌀 STLC Phases
+
+## Requirement Phase Testing
+
+**Requirement Phase Testing** (also known as Requirement Analysis) is where the test team analyzes the requirements from a testing perspective. The objective is to identify testable requirements. QA teams often collaborate with stakeholders to understand requirements, both functional and non-functional, in detail. Automation feasibility for the project is also assessed during this phase.
+
+### Activities:
+- Identify types of tests to be performed
+- Gather details about testing priorities and focus
+- Prepare Requirement Traceability Matrix (RTM)
+- Identify test environment details
+- Perform automation feasibility analysis (if required)
+
+### Deliverables:
+- RTM
+- Automation feasibility report (if applicable)
 
 ---
 
-### 3. Test Case Design (Development)
-- Write detailed test cases and scripts.
-- Prepare required test data.
-- Review and finalize test cases.
+## Test Planning in STLC
+
+**Test Planning** is when the Senior QA Manager defines the test plan strategy along with estimating efforts and costs. The team also identifies test resources, environment, limitations, and schedules. The finalized Test Plan is the key output.
+
+### Activities:
+- Prepare test plan/strategy for various testing types
+- Select test tools
+- Estimate test efforts
+- Plan resources and assign roles
+- Identify training requirements
+
+### Deliverables:
+- Test plan/strategy document
+- Effort estimation document
 
 ---
 
-### 4. Test Environment Setup
-- Set up hardware/software configurations.
-- Includes servers, databases, browsers, etc.
-- Done by dev/infra team with QA coordination.
+## Test Case Development Phase
+
+In this phase, the QA team creates, verifies, and reworks test cases and scripts after the test plan is complete. Test data is identified, created, reviewed, and updated based on preconditions.
+
+### Activities:
+- Create test cases and automation scripts (if applicable)
+- Review and baseline test cases/scripts
+- Create test data (if a test environment is available)
+
+### Deliverables:
+- Test cases/scripts
+- Test data
 
 ---
 
-### 5. Test Execution
-- Execute test cases as per the plan.
-- Log and track bugs/defects.
-- Re-test after fixes and perform regression if needed.
+## Test Environment Setup
+
+The **Test Environment Setup** defines the hardware and software under which testing is conducted. This is a crucial part of the process and may be executed parallel to test case development. Smoke testing is often performed to verify environment readiness.
+
+### Activities:
+- Understand the required architecture and setup
+- Prepare hardware and software requirement list
+- Setup environment and test data
+- Perform smoke testing
+
+### Deliverables:
+- Ready test environment with data setup
+- Smoke test results
 
 ---
 
-### 6. Test Closure
-- Prepare test summary report.
-- Evaluate testing metrics and defect analysis.
-- Archive test artifacts and lessons learned.
+## Test Execution Phase
+
+**Test Execution** involves executing the test cases and reporting any bugs. If bugs are found, they are reported to the development team and then retested once fixed.
+
+### Activities:
+- Execute tests as per plan
+- Document results and log defects
+- Map defects to test cases in RTM
+- Retest defect fixes
+- Track defects until closure
+
+### Deliverables:
+- RTM with execution status
+- Updated test cases with results
+- Defect reports
 
 ---
+
+## Test Cycle Closure
+
+In **Test Cycle Closure**, the team ensures that all planned work is completed. Lessons learned are documented, and metrics are collected to improve future test cycles.
+
+### Activities:
+- Evaluate completion criteria (Time, Coverage, Cost, Quality, etc.)
+- Prepare test metrics
+- Document project learnings
+- Prepare test closure report
+- Analyze test results and defect distribution
+
+### Deliverables:
+- Test closure report
+- Test metrics
+"""
+
 
 ## Functional vs Non-Functional Testing
 
@@ -287,7 +345,7 @@ It includes a series of **well-defined phases** to manage testing efficiently fr
 ### Examples:
 - Login functionality  
 - Form submission  
-- User registration  
+- User Registration  
 - Search operations  
 
 ---
@@ -297,7 +355,7 @@ It includes a series of **well-defined phases** to manage testing efficiently fr
 - **Definition**: Non-functional testing verifies the **performance, usability, reliability, and other quality attributes** of the system.
 - **Focus**: Tests **how the system behaves** under certain conditions.
 - **Based on**: Non-functional requirements.
-- **Goal**: Ensure system meets expected quality standards.
+- **Goal**: Ensure the system meets expected quality standards.
 
 ### Examples:
 - Load Testing  
@@ -338,13 +396,13 @@ Mainly bug life cycle refers to its entire state starting from a new defect dete
 ## Typical Defect States:
 
 1. **New** – When any new defect is identified by the tester, it falls in the ‘New’ state. The tester provides a proper Defect document to the Development team so that the development team can refer to the Defect Document and fix the bug accordingly.
-2. **Assigned** – Defects that are in the status of ‘New’ will be approved and that newly identified defect is assigned to the development team for working on the defect and to resolve that. When the defect is assigned to the developer team the status of the bug changes to the ‘Assigned’ state.
-3. **Open** –  In this ‘Open’ state the defect is being addressed by the developer team and the developer team works on the defect for fixing the bug. Based on some specific reason if the developer team feels that the defect is not appropriate then it is transferred to either the ‘Rejected’ or ‘Deferred’ state.
-4. **Fixed** –After necessary changes of codes or after fixing identified bug developer team marks the state as ‘Fixed’.
+2. **Assigned** – Defects that are in the status of ‘New’ will be approved and that newly identified defect will be assigned to the development team to work on the defect and to resolve that. When the defect is assigned to the developer team the status of the bug changes to the ‘Assigned’ state.
+3. **Open** –  In this ‘Open’ state the defect is being addressed by the developer team and the developer team works on the defect to fix the bug. Based on some specific reason if the developer team feels that the defect is not appropriate then it is transferred to either the ‘Rejected’ or ‘Deferred’ state.
+4. **Fixed** –After necessary changes of codes or after fixing the identified bug developer team marks the state as ‘Fixed’.
 5. **Pending** – During the fixing of the defect is completed, the developer team passes the new code to the testing team for retesting. The code/application is pending for retesting on the Tester side so the status is assigned as ‘Pending Retest’.
 6. **Retesting** – At this stage, the tester starts work of retesting the defect to check whether the defect is fixed by the developer or not, and the status is marked as ‘Retesting’.
 7. **Re-Open** – After ‘Retesting’ if the tester team finds that the bug continues like previously even after the developer team has fixed the bug, then the status of the bug is again changed to ‘Reopened’. Once again bug goes to the ‘Open’ state and goes through the life cycle again. This means it goes for Re-fixing by the developer team.
-8. **Verified** - The tester re-tests the bug after it got fixed by the developer team and if the tester does not find any kind of defect/bug then the bug is fixed and the status assigned is ‘Verified’.
+8. **Verified** - The tester re-tests the bug after it is fixed by the developer team and if the tester does not find any kind of defect/bug then the bug is fixed and the status assigned is ‘Verified’.
 9.  ***Closed** - It is the final state of the Defect Cycle, after fixing the defect by the developer team when testing found that the bug has been resolved and it does not persist then they mark the defect as a ‘Closed’ state.
 
 ### Possible Alternate States:
@@ -377,152 +435,6 @@ Closed
 ---
 
 
-# Software Testing Life Cycle (STLC)
-
-The procedure of software testing is also known as **STLC (Software Testing Life Cycle)** which includes phases of the testing process. The testing process is executed in a well-planned and systematic manner. All activities are done to improve the quality of the software product.
-
-## STLC Phases Overview
-
-1. Requirement Analysis
-2. Test Plan Creation
-3. Environment Setup
-4. Test Case Execution
-5. Defect Logging
-6. Test Cycle Closure
-
----
-
-## Requirement Analysis
-
-**Definition:**
-First step of manual testing where testers analyze the requirement document (from SDLC) to examine the client’s needs and prepare for validation.
-
-**Entry Criteria:**
-- Requirement specification
-- Application architecture document
-- Acceptance criteria
-
-**Activities:**
-- Prepare a list of requirements & get clarifications
-- Identify all test types (performance, functional, security)
-- Identify required test environments
-
-**Deliverables:**
-- List of testable requirements
-- Test environment details
-
----
-
-## Test Plan Creation
-
-**Definition:**
-Crucial phase where test strategies are defined and effort/cost estimations are made.
-
-**Entry Criteria:**
-- Requirement document
-
-**Activities:**
-- Define objectives and scope
-- Plan testing methods and schedules
-- Define roles and responsibilities
-- Identify deliverables and risks
-
-**Deliverables:**
-- Test strategy document
-- Effort estimation
-
----
-
-## Environment Setup
-
-**Definition:**
-Independent activity that ensures the readiness of the test environment using necessary software/hardware.
-
-**Entry Criteria:**
-- Test strategy & plan
-- Test cases
-- Test data
-
-**Activities:**
-- Prepare list of software/hardware
-- Execute smoke tests to validate environment
-
-**Deliverables:**
-- Environment setup confirmation
-- Smoke test report
-
----
-
-## Test Case Execution
-
-**Definition:**
-Testing team executes developed test cases, logs results, and tracks mapped requirements through RTM (Requirement Traceability Matrix).
-
-**Entry Criteria:**
-- Requirement Document
-
-**Activities:**
-- Write and execute test cases
-- Map test cases to requirements
-- Prepare RTM
-
-**Deliverables:**
-- Test execution results
-- Defect list and details
-
----
-
-## Defect Logging
-
-**Definition:**
-Evaluation of software based on test metrics, logs defects, and sends for re-testing post fixes.
-
-**Entry Criteria:**
-- Test case execution report
-- Defect report
-
-**Activities:**
-- Analyze defects by type and severity
-- Log and re-test defects
-
-**Deliverables:**
-- Closure report
-- Test metrics
-
----
-
-## Test Cycle Closure
-
-**Definition:**
-Final phase that evaluates the overall testing strategy and prepares closure documentation for future reference.
-
-**Entry Criteria:**
-- All test reports and defect documentation
-
-**Activities:**
-- Evaluate test strategy and outcomes
-- Archive documents for future use
-
-**Deliverables:**
-- Test Closure Report
-
----
-
-## STLC Flow Summary:
-
-```
-Requirement Analysis
-       ↓
-Test Plan Creation
-       ↓
-Environment Setup
-       ↓
-Test Case Execution
-       ↓
-Defect Logging
-       ↓
-Test Cycle Closure
-```
 
 
 
