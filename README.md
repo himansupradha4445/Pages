@@ -501,10 +501,29 @@ Closed
 
 ---
 
----
+## Retesting Testing
+Retesting is a type of software testing that is conducted to verify that specific defects reported in a previous build have been successfully fixed. It involves re-executing the same test cases that originally failed to confirm the issue is resolved.
+- **Purpose**  
+  To verify that a specific defect/bug has been fixed.
+- **When It’s Performed**  
+ Immediately after a reported bug is marked as fixed.
+- **Example**  
+  A bug in the password reset page is fixed — retesting ensures that password reset now works correctly.
+- **Goal**  
+  Confirm the fix works as expected.
 
 
+  ## Regression Testing
+Regression Testing is a type of software testing performed to verify that recent code changes have not adversely affected the existing functionalities of the application. It ensures that new defects are not introduced into previously tested code, and the software continues to perform correctly after modifications.
 
+- **Purpose**  
+  To ensure that new changes (like bug fixes or new features) haven’t broken existing functionality.
+ After any code changes, whether it's a new feature or bug fix.
+- **Example**  
+ After fixing a bug in the login module, regression testing checks login, dashboard, profile, etc., to ensure nothing else is broken.
+
+- **Goal**  
+ Catch unintended side effects of changes.
 
 
 
