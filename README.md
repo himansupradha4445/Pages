@@ -432,6 +432,75 @@ Verified
 Closed
 
 '''
+
+## Smoke Testing
+
+- **Purpose**  
+  To verify that the basic and critical functionalities of a software build are working.
+- **When It’s Performed**  
+ Performed on a new software build before it is sent for detailed testing.
+- **Example**  
+  Can you log in? Can you navigate through main pages?
+- **Goal**  
+  Check for show-stopper bugs that would prevent further testing.
+- **Also Known As**  
+  Build verification testing.
+
+---
+
+## Sanity Testing
+
+- **Purpose**  
+  To ensure that a specific function or bug fix works as expected after changes.
+- **When It’s Performed**  
+  After receiving a new build with minor changes or bug fixes.
+- **Example**  
+  A bug in the search feature was fixed — sanity test checks only the search function, not the entire app.
+- **Goal**  
+ Verify the logic of a particular area before more rigorous testing.
+---
+
+## Key Differences
+
+<Table>
+  <thead>
+    <tr>
+      <th>Aspect</th>
+      <th>Smoke Testing</th>
+      <th>Sanity Testing</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Objective</td>
+      <td>Verify build integrity for end‑to‑end basics</td>
+      <td>Verify correctness of specific functionality or fix</td>
+    </tr>
+    <tr>
+      <td>Trigger</td>
+      <td>Every new build</td>
+      <td>After passing smoke and upon targeted changes/fixes</td>
+    </tr>
+    <tr>
+      <td>Breadth vs. Depth</td>
+      <td>Wide breadth, shallow depth</td>
+      <td>Narrow breadth, deeper depth</td>
+    </tr>
+    <tr>
+      <td>Automation‑Suitability</td>
+      <td>Highly suited (fast, repeatable checks)</td>
+      <td>Often manual, but can be automated for critical fixes</td>
+    </tr>
+    <tr>
+      <td>Outcome</td>
+      <td>Build accepted/rejected for further testing</td>
+      <td>Build accepted/rejected for full regression</td>
+    </tr>
+  </tbody>
+</Table>
+
+---
+
 ---
 
 
